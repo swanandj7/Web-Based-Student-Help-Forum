@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/login.css" type="text/css" media="all">
+<title>SignUp</title>
+<script type="text/javascript">
+function validateForm()
+{
+	var x = document.forms["myform"]["email"].value;
+	if(x==null||x=="")
+	{
+		alert("Email must be filled out.");
+		return false;
+	}
+	x = document.forms["myform"]["firstname"].value;
+	if(x==null||x=="")
+	{
+		alert("Firstname must be filled out.");
+		return false;
+	}
+	x = document.forms["myform"]["lastname"].value;
+	if(x==null||x=="")
+	{
+		alert("Lastname must be filled out.");
+		return false;
+	}
+	x = document.forms["myform"]["contact"].value;
+	if(x==null||x=="")
+	{
+		alert("Contact must be filled out.");
+		return false;
+	}
+	x = document.forms["myform"]["pass"].value;
+	if(x==null||x=="")
+	{
+		alert("Password must be filled out.");
+		return false;
+	}
+	var y =  document.forms["myform"]["repass"];
+	f( x != y)
+		{
+			alert("Passwords not matching.");
+			return false;
+		}
+}
+
+</script>
+</head>
+<body>
+
+<div class="container">
+	<section id="content">
+		<form  id="signup" onsubmit= "return validateForm()" name= "myform" action="signup.jsp" method="post">
+			<h1>SignUp Form</h1>
+			<div>
+				<input type="text" placeholder="Firstname" id="username" name="firstname"/>
+			</div>
+			<div>
+				<input type="text" placeholder="Lastname" id="username" name="lastname"/>
+			</div>
+			<div>
+				<input type="text" placeholder="Email ID" id="username" name="email"/>
+			</div>
+			<div>
+				<input type="password"  placeholder="Password" name="pass"/>
+			</div>
+			<div>
+				<input type="password"  placeholder="Retype Password" name="repass"/>
+			</div>
+			<div>
+				<input type="text" placeholder="Contact" name="contact"/>
+			</div>
+			<div>
+				<input type="submit" value="SignUp" />
+			</div>
+		</form><!-- form -->
+	</section><!-- content -->
+</div>	
+</body>
+</html>

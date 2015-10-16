@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+	.header{
+		margin:40px 0px 20px 0px;
+	}
+</style>
+</head>
+<body>
+<div id="maindiv">
+			<div class="header" >
+				<img src="images/title.gif" alt="Galerie Botanique" width="456" height="122" />
+				<p>Here is a selection of antique botanical prints held in our collection.</p>
+			</div>	
+			<br> <br>
+			<form id="signup" onsubmit= "return validateForm()" name= "myform" action="signup.jsp" method="post">
+
+				<fieldset>
+				<legend></legend>
+				<table width="340" border="0">
+				
+				<tr><td>Last name</td> <td><input type="text" name="lastname"></td></tr>
+				<tr><td>Email ID</td> <td><input type="text" name="email"></td></tr>
+				<tr><td>Password</td> <td><input type="password" name="pass"></td></tr>
+				<tr><td>Re-Type</td> <td><input type="password" name="repass"></td></tr>
+				
+				
+				<tr>
+				<td>Gender </td>
+				<td><input type="radio" name="gen" value="male">Male</td> 
+				<td><input type="radio" name="gen" value="female">Female</td> 
+				</tr>
+				
+				<tr> <td> Birthdate </td> <td><input type="date" name="bday"></td></tr>
+				
+				<tr><td>Contact</td> <td><input type="text" name="contact"></td></tr>
+				
+				
+				</table>
+				<input type="submit" name="submit" value="signUp"> 
+				<input type="button" name="cancel" value="cancel">
+				</fieldset>
+				
+			</form>
+			
+		</div>
+
+
+</body>
+</html>
